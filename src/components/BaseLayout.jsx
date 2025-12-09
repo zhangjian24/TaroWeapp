@@ -16,6 +16,11 @@ export default function BaseLayout({current=0,children}) {
     }
     if(value == 2){
         Taro.redirectTo({
+            url: '/pages/chat/index',
+        })
+    }
+    if(value == 3){
+        Taro.redirectTo({
             url: '/pages/settings/index',
         })
     }
@@ -23,29 +28,22 @@ export default function BaseLayout({current=0,children}) {
 
   const tabList = [{ title: '',iconType:'home' },
      { title: '',iconType:'shopping-cart' },
+     { title: '',iconType:'message' },
       {  title: '',iconType:'settings'  }]
   return (
-    <View className='at-row'>
-    <View className='at-col'>
-      <View  className='at-row'>
-      <View className='at-col'>
+    <View className='flex-col overflow-hidden h-screen'>
+      <View  className='grow-0 w-full h-1/6'>
         <AtNoticebar marquee>
           这是 NoticeBar 通告栏，这是 NoticeBar 通告栏，这是 NoticeBar 通告栏
         </AtNoticebar>
       </View>
-      </View>
-      <View className='at-row'>
-      <View className='at-col'>
+      <View className='grow py-1 h-4/6 overflow-auto'>
         {children}
       </View>
-      </View>
-      <View className='at-row'>
-      <View className='at-col'>
-      <AtTabBar fixed current={current} tabList={tabList} selectedColor={'blue'} className="bg-sky-100" onClick={handleClick}>
+      <View className='grow-0 h-1/6'>
+      <AtTabBar  current={current} tabList={tabList} selectedColor={'blue'} className='bg-sky-100' onClick={handleClick}>
       </AtTabBar>
       </View>
-      </View>
-    </View>
     </View>
 
   )

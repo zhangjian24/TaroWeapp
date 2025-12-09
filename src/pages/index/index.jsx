@@ -1,6 +1,6 @@
 import { View,Image,Swiper, SwiperItem } from '@tarojs/components'
 import BaseLayout from '../../components/BaseLayout'
-import { AtDivider,AtCard,AtButton  } from "taro-ui"
+import { AtDivider,AtCard } from "taro-ui"
 
 export default function Index() {
   const imgUrls = [
@@ -27,8 +27,8 @@ export default function Index() {
         >
           {
             imgUrls.map((item, idx) => (
-              <SwiperItem key={idx} className='flex justify-center'>
-                <Image mode='widthFix' src={item} width='350' height='150' />
+              <SwiperItem key={idx} className='flex justify-center justify-items-center'>
+                <Image mode='widthFix' src={item} width='350' height='150' className='block'/>
               </SwiperItem>
             ))
           }
