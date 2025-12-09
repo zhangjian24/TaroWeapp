@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "TaroWeapp",
   "description": "demo",
-  "appid": "touristappid",
+  "appid": "wxb5d8f3bfb364d077",
   "setting": {
     "urlCheck": true,
     "es6": false,

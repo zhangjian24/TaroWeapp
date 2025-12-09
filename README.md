@@ -138,24 +138,24 @@ TaroWeapp/
 ### 开发环境
 ```bash
 # 微信小程序
-npm run dev:weapp
+pnpm dev:weapp
 
 # H5
-npm run dev:h5
+pnpm dev:h5
 
 # 其他平台
-npm run dev:alipay  # 支付宝小程序
-npm run dev:tt      # 字节跳动小程序
-npm run dev:swan    # 百度智能小程序
+pnpm dev:alipay  # 支付宝小程序
+pnpm dev:tt      # 字节跳动小程序
+pnpm dev:swan    # 百度智能小程序
 ```
 
 ### 生产构建
 ```bash
 # 微信小程序构建
-npm run build:weapp
+pnpm build:weapp
 
 # H5构建
-npm run build:h5
+pnpm build:h5
 ```
 
 ### 安装依赖
