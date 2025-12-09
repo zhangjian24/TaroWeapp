@@ -3,7 +3,6 @@ import BaseLayout from '../../components/BaseLayout'
 import { AtCard,AtTextarea, AtForm,AtButton  } from "taro-ui"
 import { useState } from 'react';
 import {sendMessage} from '../../api/chat'
-import Markdown from 'react-markdown'
 
 export default function Index() {
    const [ques, setQues] = useState(''); // 定义内部状态
@@ -11,7 +10,7 @@ export default function Index() {
 
   return (
     <BaseLayout current={2}>
-      <view>
+      <View>
           <AtForm>
             <AtCard title='问题'>
             <AtTextarea 
@@ -34,11 +33,11 @@ export default function Index() {
             }}>发送</AtButton>
           <AtCard title='回答'>
           </AtCard>
-          <view className='block p-8'>
-            <Markdown>{resp}</Markdown>
-            </view>
+          <View className='block p-8'>
+            {resp}
+            </View>
           </AtForm>
-        </view>
+        </View>
     </BaseLayout>
   )
 }

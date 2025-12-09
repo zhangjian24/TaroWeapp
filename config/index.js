@@ -62,6 +62,12 @@ export default defineConfig(async (merge, { command, mode }) => {
           }
         }
       },
+      optimizeMainPackage: {
+        enable: true
+      },
+      runtime: {
+        enableTemplateRecursion: true
+      },            
     },
     h5: {
       esnextModules: ['taro-ui'],
