@@ -67,7 +67,11 @@ export default defineConfig(async (merge, { command, mode }) => {
       },
       runtime: {
         enableTemplateRecursion: true
-      },            
+      },   
+      compile: {
+        exclude: ["/node_modules/"] // 确保必要时排除 node_modules
+      },
+      baseLevel: 16,     
     },
     h5: {
       esnextModules: ['taro-ui'],
